@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+    let escolhaDoJogador = prompt("Escolha uma das opções: pedra, papel ou tesoura")
+    let escolhaDoJogadorUpper = escolhaDoJogador.toUpperCase()
+    let listaDeOpcoes = ["PEDRA","PAPEL","TESOURA"]
+    let escolhaDaMaquina = listaDeOpcoes[Math.floor(Math.random()*listaDeOpcoes.length)]
+
+    if(escolhaDoJogadorUpper == "PEDRA" 
+    || escolhaDoJogadorUpper == "PAPEL"
+    ||escolhaDoJogadorUpper == "TESOURA"){        
+        if (escolhaDaMaquina == "PEDRA" && escolhaDoJogadorUpper == "TESOURA"
+        || escolhaDaMaquina == "PAPEL" && escolhaDoJogadorUpper == "PEDRA"
+        || escolhaDaMaquina == "TESOURA" && escolhaDoJogadorUpper == "PAPEL"){
+            document.write("Escolha do Jogador: ",escolhaDoJogadorUpper,"<br>");
+            document.write("Escolha da Máquina: ",escolhaDaMaquina,"<br>");
+            document.write("<br>","Vitória da maquina !!!")
+        }
+        else if(escolhaDaMaquina == escolhaDoJogadorUpper){
+            document.write("Escolha do Jogador: ",escolhaDoJogadorUpper,"<br>");
+            document.write("Escolha da Máquina: ",escolhaDaMaquina,"<br>");
+            document.write("<br>","Empate técnico")
+        } 
+        else{
+            document.write("Escolha do Jogador: ",escolhaDoJogadorUpper,"<br>");
+            document.write("Escolha da Máquina: ",escolhaDaMaquina,"<br>");
+            document.write("<br>","Vitória da vitoria do jogador")
+        }
+    } else{
+        document.write("Valor informado inválido")
+    }
+
+
+</script>
